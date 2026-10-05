@@ -18,9 +18,9 @@
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Tender home"><img src="assets/logo.svg" alt=""><span>Tender</span></a>
     <nav class="nav-links" aria-label="Sections">
-      <a href="#sides">For her &amp; him</a>
+      <a href="#try">Try the prototype</a>
       <a href="#how">How it works</a>
-      <a href="#date">The date</a>
+      <a href="#sides">For her &amp; him</a>
       <a href="#why">Why Tender</a>
       <a class="btn btn-ink" href="#join">Join the waitlist</a>
     </nav>
@@ -34,31 +34,84 @@
   <img class="hero-smoke" src="assets/smoke.png" alt="">
   <img class="hero-flame" src="assets/flame.png" alt="">
 
-  <div class="wrap hero-stack">
-    <div class="wordmark">
-      <img src="assets/logo.svg" alt="">
-      <h1>Tender</h1>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="wordmark">
+        <img src="assets/logo.svg" alt="">
+        <span class="wordmark-text">Tender</span>
+      </div>
+      <p class="tagline">🔥 Let's spice things up 🔥</p>
+      <h1 class="hero-h1">He shows off<br>his dish. She<br>rates it.</h1>
+      <p class="hero-lede">Tender is the dating app for foodies. Men post videos of the dishes they cook. Women rate them and make the first move. Every match ends at a table.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-ink" href="#join">Join the waitlist</a>
+        <a class="btn btn-light" href="#try">Try the prototype ↓</a>
+      </div>
+      <p class="hero-meta">Coming soon to iPhone and Android · Launching in Vancouver</p>
     </div>
-    <p class="tagline">🔥 Let's spice things up 🔥</p>
 
-    <div class="hero-demo">
-      <aside class="try" aria-label="How to try the demo">
-        <p class="try-title">Try it yourself</p>
-        <p class="try-sub">This is a working demo of the app. Tap right on the phone.</p>
-        <ol class="try-steps" id="try-steps">
-          <li data-step="1"><b>Watch his dish</b><span>Each card leads with a cook's video and his profile photo.</span></li>
-          <li data-step="2"><b>Tap the stars to rate it</b><span>Your rating replaces the swipe.</span></li>
-          <li data-step="3"><b>Tap "Make the move"</b><span>Pick a first line. It's sent with your rating.</span></li>
-        </ol>
-        <p class="try-tip">Not feeling it? Tap <b>Skip</b> to see the next cook.</p>
-      </aside>
+    <div class="hero-phones" aria-label="Tender app screens: his side and her side">
+      <figure class="hero-fig his">
+        <figcaption class="side-tag"><span>His side</span>He shows off his dish</figcaption>
+        <div class="phone">
+          <div class="screen">
+            <div class="splash" aria-hidden="true"><div class="splash-mark"><img src="assets/logo.svg" alt=""><span>Tender</span></div></div>
+            <div class="appbar"><div class="logo"><img src="assets/logo.svg" alt=""><span>Tender</span></div><span class="appbar-note">My menu</span></div>
+            <div class="scr-body">
+              <div class="me-row"><div class="ph"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=160&q=70&auto=format&fit=crop" alt=""></div><div><b>Marcus, 31</b><span>Teacher · Commercial Drive</span><span class="avg">★ 4.7 from 38 ratings</span></div></div>
+              <div class="feature-dish ph">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=500&q=70&auto=format&fit=crop" alt="">
+                <span class="play" aria-hidden="true"></span>
+                <span class="dur">▶ 0:42</span>
+                <div class="dish">Reverse-seared T-bone<small>Rated 4.9★ by 21 women</small></div>
+              </div>
+              <h5 class="mini-h">My menu</h5>
+              <div class="menu-grid">
+                <div><div class="ph"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=200&q=70&auto=format&fit=crop" alt=""></div><span>Smoked brisket</span></div>
+                <div><div class="ph"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200&q=70&auto=format&fit=crop" alt=""></div><span>Margherita</span></div>
+                <div><div class="ph"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=200&q=70&auto=format&fit=crop" alt=""></div><span>Pan-sauce pasta</span></div>
+              </div>
+              <div class="cta-bar">+ Post a new dish</div>
+            </div>
+            <div class="tabbar"><span class="on"><b>🔪</b>Kitchen</span><span><b>⭐</b>Ratings</span><span><b>📅</b>Dates</span><span><b>👨‍🍳</b>Learn</span></div>
+          </div>
+        </div>
+      </figure>
 
-      <div class="hero-phone">
+      <figure class="hero-fig hers">
+        <figcaption class="side-tag"><span>Her side</span>She rates the cooks</figcaption>
+        <div class="phone">
+          <div class="screen">
+            <div class="splash late" aria-hidden="true"><div class="splash-mark"><img src="assets/logo.svg" alt=""><span>Tender</span></div></div>
+            <div class="appbar"><div class="logo"><img src="assets/logo.svg" alt=""><span>Tender</span></div><span class="appbar-note">Rate the cooks</span></div>
+            <div class="deck"><article class="card" id="hero-card"></article></div>
+            <div class="deck-actions" aria-hidden="true"><span class="pass btn-fake">Skip</span><span class="move btn-fake">Make the move 💌</span></div>
+            <div class="tabbar"><span class="on"><b>⭐</b>Rate</span><span><b>💬</b>Moves</span><span><b>📅</b>Dates</span><span><b>🍽️</b>My taste</span></div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRY THE PROTOTYPE ============ -->
+<section class="try-section pattern on-cream" id="try">
+  <div class="wrap try-grid">
+    <div class="try-copy">
+      <p class="proto-badge">Interactive prototype</p>
+      <h2>Try it as Sarah</h2>
+      <p class="lede">This is her side of Tender. Four men nearby have posted dishes. Rate one, then make the first move. Everything on the phone works.</p>
+      <ol class="try-steps" id="try-steps">
+        <li data-step="1"><b>Watch his dish</b><span>Each card leads with his cooking video and his profile photo.</span></li>
+        <li data-step="2"><b>Tap the stars to rate it</b><span>Your rating replaces the swipe.</span></li>
+        <li data-step="3"><b>Tap "Make the move"</b><span>Pick a first line. He gets it with your rating.</span></li>
+      </ol>
+      <p class="try-tip">Not feeling it? Tap <b>Skip</b> to see the next cook.</p>
+    </div>
+    <div class="try-phone">
+      <span class="tap-hint" id="tap-hint" aria-hidden="true">Tap the stars ⭐</span>
       <div class="phone" id="discover-phone">
         <div class="screen">
-          <div class="splash" id="splash" aria-hidden="true">
-            <div class="splash-mark"><img src="assets/logo.svg" alt=""><span>Tender</span></div>
-          </div>
           <div class="appbar">
             <div class="logo"><img src="assets/logo.svg" alt=""><span>Tender</span></div>
             <span class="appbar-note">Rate the cooks</span>
@@ -89,40 +142,6 @@
           </div>
         </div>
       </div>
-      </div>
-
-      <aside class="try try-who" aria-label="Whose view this is">
-        <p class="try-title">You're Sarah</p>
-        <p class="try-sub">You're seeing the app as a woman in Vancouver. Four cooks nearby have posted dishes for you to rate.</p>
-        <div class="who-faces" aria-hidden="true">
-          <div class="ph"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=70&auto=format&fit=crop" alt=""></div>
-          <div class="ph"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=70&auto=format&fit=crop" alt=""></div>
-          <div class="ph"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&q=70&auto=format&fit=crop" alt=""></div>
-          <div class="ph"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=70&auto=format&fit=crop" alt=""></div>
-        </div>
-        <p class="try-tip">Only you can start the conversation. He replies once you make the move.</p>
-      </aside>
-    </div>
-
-    <p class="lede hero-lede">The dating app for foodies. He cooks. She rates. She makes the first move, and every match ends at a table.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-ink" href="#join">Join the waitlist</a>
-      <a class="btn btn-ghost" href="#sides">See how it works</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FLIP ============ -->
-<section class="flip pattern on-cream">
-  <div class="wrap">
-    <div>
-      <h2>No swiping. She rates the cooking.</h2>
-      <p class="lede">Most dating apps are a swipe on a selfie. On Tender, men post the dishes they cook and women rate them. A great rating is how she shows interest, and only she can start the conversation. It's attraction with a reason to talk built in.</p>
-    </div>
-    <div class="bubbles" aria-label="Example openers">
-      <p class="bubble old">Hey, what do you do?</p>
-      <p class="bubble new">Five stars for that brisket. Where'd you learn that?</p>
-      <p class="bubble new">You make your own pasta? Prove it.</p>
     </div>
   </div>
 </section>

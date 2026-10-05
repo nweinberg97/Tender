@@ -17,12 +17,12 @@
        </div>`);
   });
 
-  // The hero phone opens on the coral splash screen, then reveals the app.
-  const splash = document.getElementById("splash");
-  if (splash) {
-    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    setTimeout(() => splash.classList.add("gone"), still ? 0 : 1500);
-  }
+  // The hero phones open on the coral splash screen, like the promo, then reveal the app.
+  const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll(".splash").forEach((sp) => {
+    const wait = still ? 0 : sp.classList.contains("late") ? 1900 : 1400;
+    setTimeout(() => sp.classList.add("gone"), wait);
+  });
 
   /* ---------------- Rate the cooks (her view) ----------------
      No swiping: she rates his dish, then decides whether to make the move. */
@@ -30,7 +30,7 @@
     {
       name: "Marcus", age: 31, job: "High school teacher", hood: "Commercial Drive", km: 2.4,
       face: "1500648767791-00dcc994a43e", dish: "1600891964599-f61ba0e24092",
-      dishName: "Reverse-seared T-bone", short: "T-bone", dur: "0:42", note: "Cooked for 6 friends last Sunday",
+      dishName: "Reverse-seared T-bone", short: "steak", dur: "0:42", note: "Cooked for 6 friends last Sunday",
       avg: 4.7, count: 38, level: "🔥 I will absolutely make you dinner",
       signature: "Smoked brisket", learning: "Pan sauces", tags: ["BBQ", "Mexican", "Street food"],
     },
@@ -146,7 +146,7 @@
     if (!n) {
       const r = card.querySelector(".rate");
       r.classList.remove("nudge"); void r.offsetWidth; r.classList.add("nudge");
-      card.querySelector(".rate-label").textContent = `Rate his ${p.short} first`;
+      card.querySelector(".rate-label").textContent = "Rate it first";
       return;
     }
     matchFace.src = img(p.face, 300);
@@ -182,6 +182,19 @@
   starterBtns.forEach((b) => b.addEventListener("click", () => tick(3)));
 
   build();
+
+  // Hero: her side shows a card she has already rated, as a still.
+  const heroCard = document.getElementById("hero-card");
+  if (heroCard) {
+    heroCard.innerHTML = cardHTML(people[0]);
+    heroCard.querySelectorAll(".stars button").forEach((b) => { b.classList.add("lit"); b.tabIndex = -1; });
+    heroCard.querySelector(".rate-label").textContent = verdicts[5];
+    heroCard.setAttribute("aria-hidden", "true");
+  }
+
+  // The "Tap the stars" pointer goes away once she rates something.
+  const tapHint = document.getElementById("tap-hint");
+  deck.addEventListener("click", (e) => { if (tapHint && e.target.closest(".stars button")) tapHint.classList.add("gone"); });
 
   /* ---------------- Waitlist (demo, nothing is sent) ---------------- */
   const form = document.getElementById("join-form");

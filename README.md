@@ -18,7 +18,8 @@ This repo is Tender's landing page, with interactive iPhone screens showing what
 
 ## What's on the page
 
-- **A working demo in the hero phone**, with a "Try it yourself" guide beside it. You're Sarah: rate a cook's dish with the stars, tap **Make the move**, and pick a first line. **Skip** shows the next cook. The steps tick off as you go.
+- **Hero:** "He shows off his dish. She rates it." next to two phones labelled **His side** (his menu of dishes) and **Her side** (rating a cook).
+- **Try the prototype:** a clearly labelled section with a working phone. You're Sarah: rate a cook's dish with the stars, tap **Make the move**, and pick a first line. **Skip** shows the next cook. The steps beside the phone tick off as you go.
 - **Her profile and his kitchen:** what he sees when she makes the move, and his ratings, feedback and skill path.
 - **Step screens** for posting a dish, rating and compatibility, and booking a table.
 - **After-the-match screens:** the match, the conversation, the date planner, and a cook-at-home plan with a split shopping list.
