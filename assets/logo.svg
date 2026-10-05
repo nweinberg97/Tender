@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 112" role="img" aria-label="Tender">
+  <!-- T-bone steak cut in the shape of a heart. The bone forms the T. -->
+  <!-- sticker outline -->
+  <path d="M60 104C30 86 6 66 6 38 6 18 21 6 38 6c10 0 17 5 22 12 5-7 12-12 22-12 17 0 32 12 32 32 0 28-24 48-54 66Z" fill="#fff"/>
+  <!-- fat cap -->
+  <path d="M60 97C33 81 12 63 12 38 12 22 24 12 38 12c9.5 0 16.5 5.2 22 13.5C65.5 17.2 72.5 12 82 12c14 0 26 10 26 26 0 25-21 43-48 59Z" fill="#F6DCC0"/>
+  <!-- meat -->
+  <path d="M60 91C36 77 18 61 18 39 18 26 27 18 39 18c9 0 15.5 5 21 13 5.5-8 12-13 21-13 12 0 21 8 21 21 0 22-18 38-42 52Z" fill="#1C1311"/>
+  <!-- marbling -->
+  <path d="M30 46c6-3 10 2 15 0M76 58c5-3 9 1 13-2M34 66c4-2 7 1 11-1" stroke="#3A2622" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  <!-- bone: the T -->
+  <g fill="#FFF6EA">
+    <rect x="32" y="31" width="56" height="11" rx="5.5"/>
+    <rect x="54.5" y="34" width="11" height="44" rx="5.5"/>
+    <circle cx="32" cy="31.5" r="5.6"/><circle cx="32" cy="41.5" r="5.6"/>
+    <circle cx="88" cy="31.5" r="5.6"/><circle cx="88" cy="41.5" r="5.6"/>
+    <circle cx="55" cy="78" r="5.6"/><circle cx="65" cy="78" r="5.6"/>
+  </g>
+</svg>
