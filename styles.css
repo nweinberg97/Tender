@@ -761,3 +761,14 @@ footer .brand img { width: 30px; }
   .role-switch { display: grid; grid-template-columns: 1fr 1fr; border-radius: 22px; width: 100%; }
   .role-switch button { padding: 6px 10px 6px 6px; font-size: 13.5px; justify-content: flex-start; }
 }
+
+/* the one-liner under the step phones */
+.steps-line {
+  margin: 96px auto 0; text-align: center; color: #fff;
+  font-family: var(--display); font-size: clamp(40px, 5.6vw, 84px); line-height: .98;
+  letter-spacing: .04em; -webkit-text-stroke: .025em #fff; paint-order: stroke fill;
+  text-shadow: 0 3px 16px rgba(90,15,0,.3);
+}
+.steps-line span { display: block; }
+.steps-line span + span { margin-top: .06em; }
+@media (max-width: 760px) { .steps-line { margin-top: 64px; font-size: clamp(30px, 9.4vw, 44px); } }
