@@ -734,3 +734,30 @@ footer .brand img { width: 30px; }
   .equation { grid-template-columns: 1fr; }
   .eq-op { justify-self: center; font-size: 48px; }
 }
+
+/* ===== Hero, cleaned up: copy in the clear centre column, smoke top-left, flame bottom-right ===== */
+.hero { padding: 132px 0 0; }
+.hero-smoke { width: clamp(260px, 30vw, 520px); }
+.hero-flame { width: clamp(240px, 28vw, 500px); }
+.hero-stack { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.hero-copy { max-width: 640px; }
+.hero-h1 { margin-top: 0; font-size: clamp(56px, 7vw, 104px); line-height: .9; }
+.hero-lede { margin: 20px auto 0; max-width: 31em; }
+.hero-ctas { justify-content: center; }
+.hero-phones { margin-top: 56px; gap: 40px; align-items: flex-end; }
+.hero-fig.hers { margin-top: 0; margin-bottom: 0; }
+.hero-fig.his { margin-bottom: 48px; }
+.hero-fig .phone { margin-bottom: -150px; }
+.hero { padding-bottom: 0; }
+
+@media (max-width: 760px) {
+  .hero { padding-top: 104px; }
+  .hero-lede { color: #fff; }
+  .hero-phones { margin-top: 40px; }
+  .hero-fig .phone { margin-bottom: -60px; }
+}
+.hero-stack .screen { text-align: left; }
+@media (max-width: 520px) {
+  .role-switch { display: grid; grid-template-columns: 1fr 1fr; border-radius: 22px; width: 100%; }
+  .role-switch button { padding: 6px 10px 6px 6px; font-size: 13.5px; justify-content: flex-start; }
+}

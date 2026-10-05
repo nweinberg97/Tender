@@ -1,6 +1,6 @@
 # Tender
 
-**Let's spice things up.** Tender is a concept for a dating app built around food. Men post videos of the dishes they cook and use Tender to get better at cooking. Women rate the food, not the face. Every day, Tender suggests one dinner plan, at a restaurant or a cooking class, with someone compatible, and she makes the call.
+**Date someone with taste.** Tender is a concept for a dating app built around food. Men post videos of the dishes they cook and use Tender to get better at cooking. Women rate the food, not the face. Every day, Tender suggests one dinner plan, at a restaurant or a cooking class, with someone compatible, and she makes the call.
 
 This repo is Tender's landing page, with interactive iPhone screens showing what the app looks like.
 
@@ -20,8 +20,8 @@ Everyone has a short bio and a few photos. The rest is food:
 
 ## What's on the page
 
-- **Hero:** "He shows off his dish. She rates it." next to two phones labelled **His side** and **Her side**.
-- **Try the prototype:** switch between **Try it as Sarah** and **Try it as Marcus**.
+- **Hero:** "Date someone with taste." next to two phones labelled **The cook** and **The critic**.
+- **Take a bite (the prototype):** switch between **Be Sarah** and **Be Marcus**.
   - *Sarah:* rate four cooks' dishes, open tonight's plan (picked from your best rating plus shared tastes), then book it or pass.
   - *Marcus:* see who's rating you and open each woman's food profile, open tonight's plan with Sarah, and tap "I'm in". She makes the final call.
   - The steps beside the phone tick off as you go.
@@ -32,6 +32,7 @@ Everyone has a short bio and a few photos. The rest is food:
 ## Brand
 
 - **Logo:** a black T-bone steak shaped like a heart, with a white sticker outline and a white T for Tender (`assets/logo.svg`).
+- **Positioning line:** "Date someone with taste."
 - **Tagline:** "Let's spice things up."
 - **Look:** a chili red to cream gradient with the smoke and flame from the original promo art, a coral (`#DD6750`) food-pattern background, black step cards, and a classic notched iPhone that opens on the coral splash screen.
 - **Type:** Bebas Neue for the wordmark and headlines, Lora for step-card subtitles, Bricolage Grotesque for body text. All self-hosted under the SIL Open Font License (`assets/fonts`).

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tender · Let's spice things up</title>
-  <meta name="description" content="Tender is the dating app for foodies. He shows off his cooking, she rates the food, and every day Tender suggests one dinner plan. She makes the call.">
+  <title>Tender · Date someone with taste</title>
+  <meta name="description" content="Date someone with taste. He brings the dish, she brings the verdict, and every day Tender serves up one dinner plan. She decides if it's on.">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <meta property="og:title" content="Tender · Let's spice things up">
-  <meta property="og:description" content="He cooks. She rates. Tender plans dinner. She makes the call.">
+  <meta property="og:description" content="Date someone with taste. He brings the dish. She brings the verdict.">
   <link rel="preload" href="assets/fonts/BebasNeue.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -34,25 +34,19 @@
   <img class="hero-smoke" src="assets/smoke.png" alt="">
   <img class="hero-flame" src="assets/flame.png" alt="">
 
-  <div class="wrap hero-grid">
+  <div class="wrap hero-stack">
     <div class="hero-copy">
-      <div class="wordmark">
-        <img src="assets/logo.svg" alt="">
-        <span class="wordmark-text">Tender</span>
-      </div>
-      <p class="tagline">🔥 Let's spice things up 🔥</p>
-      <h1 class="hero-h1">He shows off<br>his dish. She<br>rates it.</h1>
-      <p class="hero-lede">Tender is the dating app for foodies. Men post the dishes they cook. Women rate the food, not the face. Every day, Tender suggests one dinner plan, at a restaurant or a cooking class, and she makes the call.</p>
+      <h1 class="hero-h1">Date someone<br>with taste.</h1>
+      <p class="hero-lede">He brings the dish. She brings the verdict. Every day, Tender serves up one dinner plan, and she decides if it's on.</p>
       <div class="hero-ctas">
         <a class="btn btn-ink" href="#join">Join the waitlist</a>
         <a class="btn btn-light" href="#try">Try the prototype ↓</a>
       </div>
-      <p class="hero-meta">Coming soon to iPhone and Android · Launching in Vancouver</p>
     </div>
 
     <div class="hero-phones" aria-label="Tender app screens: his side and her side">
       <figure class="hero-fig his">
-        <figcaption class="side-tag"><span>His side</span>He shows off his dish</figcaption>
+        <figcaption class="side-tag"><span>The cook</span>He plates it</figcaption>
         <div class="phone">
           <div class="screen">
             <div class="splash" aria-hidden="true"><div class="splash-mark"><img src="assets/logo.svg" alt=""><span>Tender</span></div></div>
@@ -79,7 +73,7 @@
       </figure>
 
       <figure class="hero-fig hers">
-        <figcaption class="side-tag"><span>Her side</span>She rates the food</figcaption>
+        <figcaption class="side-tag"><span>The critic</span>She rates it</figcaption>
         <div class="phone">
           <div class="screen">
             <div class="splash late" aria-hidden="true"><div class="splash-mark"><img src="assets/logo.svg" alt=""><span>Tender</span></div></div>
@@ -99,29 +93,29 @@
   <div class="wrap try-grid">
     <div class="try-copy">
       <p class="proto-badge">Interactive prototype</p>
-      <h2>Try Tender</h2>
+      <h2>Take a bite</h2>
       <div class="role-switch" role="tablist" aria-label="Choose whose side to try">
-        <button type="button" role="tab" id="role-her" aria-selected="true" aria-controls="phone-her" data-role="her"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=70&auto=format&fit=crop" alt="">Try it as Sarah</button>
-        <button type="button" role="tab" id="role-him" aria-selected="false" aria-controls="phone-him" data-role="him"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=70&auto=format&fit=crop" alt="">Try it as Marcus</button>
+        <button type="button" role="tab" id="role-her" aria-selected="true" aria-controls="phone-her" data-role="her"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=70&auto=format&fit=crop" alt="">Be Sarah</button>
+        <button type="button" role="tab" id="role-him" aria-selected="false" aria-controls="phone-him" data-role="him"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=70&auto=format&fit=crop" alt="">Be Marcus</button>
       </div>
 
       <div class="role-copy" data-for="her">
-        <p class="lede">Sarah rates the food, not the face. Every day Tender turns her ratings into one dinner plan, and only she can book it.</p>
+        <p class="lede">You're the critic. Rate tonight's dishes and Tender plates up one plan from your favourites. Book it or pass. It's your call.</p>
         <ol class="try-steps" data-steps="her">
-          <li data-step="1"><b>Rate today's dishes</b><span>Tap the stars on each cook's dish.</span></li>
-          <li data-step="2"><b>Open tonight's plan</b><span>Built from your best rating plus your shared tastes.</span></li>
-          <li data-step="3"><b>Make the call</b><span>Book it or pass. Only you can book.</span></li>
+          <li data-step="1"><b>Rate the dishes</b><span>Stars on each plate. Judge the food, not the face.</span></li>
+          <li data-step="2"><b>Open tonight's plan</b><span>Your top-rated cook, plus the cravings you share.</span></li>
+          <li data-step="3"><b>Make the call</b><span>Book the table or pass. Nobody books you but you.</span></li>
         </ol>
       </div>
       <div class="role-copy" data-for="him" hidden>
-        <p class="lede">Marcus cooks to get better and to get noticed. He can see every woman rating his dishes and what she loves to eat. When there's a plan, he can say he's in, and Sarah decides.</p>
+        <p class="lede">You're the cook. See who's tasting your work and what she loves to eat, then raise your hand for tonight's plan. She has the final say.</p>
         <ol class="try-steps" data-steps="him">
-          <li data-step="1"><b>See who's rating you</b><span>Tap a rating to see her food profile.</span></li>
-          <li data-step="2"><b>Open tonight's plan</b><span>Matched on her rating plus your shared tastes.</span></li>
-          <li data-step="3"><b>Tap "I'm in"</b><span>Sarah makes the final call.</span></li>
+          <li data-step="1"><b>Check your reviews</b><span>Tap a rating to see who's behind it.</span></li>
+          <li data-step="2"><b>Open tonight's plan</b><span>Her rating of your cooking, plus the cravings you share.</span></li>
+          <li data-step="3"><b>Tap "I'm in"</b><span>Then it's in her hands.</span></li>
         </ol>
       </div>
-      <p class="try-tip">🛡️ First dates are always out, at a restaurant or a cooking class. Cooking at someone's home unlocks after you've met.</p>
+      <p class="try-tip">🛡️ First dates stay public: a restaurant or a class. Dinner at his place is a second-date privilege.</p>
     </div>
 
     <div class="try-phone">
@@ -201,19 +195,19 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Two sides<br>of the table</h2>
-      <p class="lede">Everyone has a short bio and a few photos. The rest of the profile is food: his is what he cooks, hers is what she loves to eat and where she'd travel to eat it.</p>
+      <p class="lede">A short bio and a few photos, then it's all flavour: what he cooks, what she craves, and where they'd fly for a bite.</p>
     </div>
 
     <div class="sides-grid">
       <!-- HER -->
       <article class="side her pattern on-coral">
         <div class="txt">
-          <p class="side-label">For her</p>
-          <h3>She rates the food. She makes the call.</h3>
+          <p class="side-label">The critic</p>
+          <h3>Taste first. Decide later.</h3>
           <ul class="side-list">
-            <li><b>⭐</b><span>Rate every cook's dishes. You're judging the food, not the face.</span></li>
-            <li><b>🍽️</b><span>Get one dinner plan a day, built from your best ratings and your shared tastes.</span></li>
-            <li><b>✅</b><span>Only she can book it. Her profile is her taste: favourite foods, restaurants, go-to meals and food travel.</span></li>
+            <li><b>⭐</b><span>Rate the dish, not the selfie.</span></li>
+            <li><b>🍽️</b><span>One plan lands every day at 5, built from your top ratings and the cravings you share.</span></li>
+            <li><b>✅</b><span>Book it or pass. Nobody books you but you.</span></li>
           </ul>
         </div>
         <div class="phone sm">
@@ -241,13 +235,13 @@
       <!-- HIM -->
       <article class="side him">
         <div class="txt">
-          <p class="side-label">For him</p>
-          <h3>He cooks. He gets better.</h3>
+          <p class="side-label">The cook</p>
+          <h3>Bring something to the table.</h3>
           <ul class="side-list">
-            <li><b>📹</b><span>Post your best dishes. Your cooking is your profile.</span></li>
-            <li><b>👀</b><span>See every woman rating your cooking, and what she loves to eat.</span></li>
-            <li><b>📈</b><span>Every rating comes with feedback, so you know what to fix.</span></li>
-            <li><b>👨‍🍳</b><span>Lessons, coaches and classes to level up, date or no date.</span></li>
+            <li><b>📹</b><span>Your cooking is your opening line.</span></li>
+            <li><b>👀</b><span>See who's tasting your work, and what she loves to eat.</span></li>
+            <li><b>📈</b><span>Every rating is free coaching. "Needs salt" is a fixable problem.</span></li>
+            <li><b>👨‍🍳</b><span>Lessons and classes sharpen your skills, date or no date.</span></li>
           </ul>
         </div>
         <div class="phone sm">
@@ -282,33 +276,33 @@
 <section class="daily" id="plan">
   <div class="wrap">
     <div class="section-head">
-      <h2>One plan<br>a day</h2>
-      <p class="lede">You're not just going on a date with a person. You're going for a great meal or a class you've wanted to try. Every day at 5pm, Tender suggests one plan with someone compatible. It's her call whether it happens.</p>
+      <h2>Dinner,<br>decided</h2>
+      <p class="lede">No endless swiping. No chats that go nowhere. At 5pm every day, Tender serves one plan: a table worth booking or a class worth taking, with someone who shares your taste. You'd want to go anyway. The company is the bonus.</p>
     </div>
     <div class="equation" aria-label="How the daily plan is chosen">
       <div class="eq-card">
         <span class="eq-ico">⭐</span>
-        <b>Her rating of his cooking</b>
-        <p>Every woman rates every man's dishes. High ratings count most.</p>
+        <b>Her verdict</b>
+        <p>Every woman rates every man's cooking. Her highest marks carry the most weight.</p>
       </div>
       <span class="eq-op" aria-hidden="true">+</span>
       <div class="eq-card">
         <span class="eq-ico">🍜</span>
-        <b>Shared food interests</b>
-        <p>Favourite cuisines, restaurants, go-to meals and food travel.</p>
+        <b>Shared cravings</b>
+        <p>Cuisines, favourite spots, go-to meals, and the trips you'd take for a bite.</p>
       </div>
       <span class="eq-op" aria-hidden="true">=</span>
       <div class="eq-card result">
         <span class="eq-ico">🍽️</span>
         <b>Tonight's plan</b>
-        <p>A restaurant or a cooking class, with a time and a table. She books it or passes.</p>
+        <p>A real table or a class, with a time. She books it or passes.</p>
       </div>
     </div>
     <div class="safety">
       <span class="safety-ico" aria-hidden="true">🛡️</span>
       <div>
-        <b>First dates are always out.</b>
-        <p>Every first plan is at a restaurant or a cooking class, somewhere public. Cooking at someone's home only unlocks after you've met.</p>
+        <b>First dates stay public.</b>
+        <p>Every first plan is a restaurant or a class. Dinner at his place is a second-date privilege.</p>
       </div>
     </div>
   </div>
@@ -319,7 +313,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Three steps<br>to dinner</h2>
-      <p class="lede">He shows what he can cook. She rates it. Tender pairs them on her rating and their shared tastes, and she decides if dinner happens.</p>
+      <p class="lede">He plates it. She judges it. Tender books the table.</p>
     </div>
 
     <div class="step-grid">
@@ -418,7 +412,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>From plan<br>to plate</h2>
-      <p class="lede">Once she books the plan, the chat opens with food openers. The first date is out. After that, Tender can suggest classes, food adventures, and dinner at his place.</p>
+      <p class="lede">She books it, the chat opens, and nobody has to think of an opener. The first date is always out. Earn a second, and he gets to cook.</p>
     </div>
 
     <div class="rail" tabindex="0" aria-label="App screens after a match">
@@ -523,14 +517,14 @@
 <section class="extras">
   <div class="wrap">
     <div class="section-head">
-      <h2>More than<br>a dating app</h2>
-      <p class="lede">Men come to Tender to get better at cooking, not only to date. Women find new places and experiences worth going to.</p>
+      <h2>Good taste,<br>either way</h2>
+      <p class="lede">Even on nights without a plan, Tender makes your food life better. He gets sharper in the kitchen. She finds the next place worth the trip.</p>
     </div>
     <div class="extras-grid">
       <article class="extra red pattern">
         <div class="txt">
-          <h3>Learn to cook better</h3>
-          <p>Ratings show him what to work on. Coaches and classes help him get there. Classes can be solo or with a match.</p>
+          <h3>Level up the kitchen</h3>
+          <p>Ratings show what to fix. Coaches and classes close the gap, solo or with a date.</p>
         </div>
         <div class="phone sm">
           <div class="screen">
@@ -552,8 +546,8 @@
 
       <article class="extra cream">
         <div class="txt">
-          <h3>Restaurant picks &amp; food adventures</h3>
-          <p>A curated list of date-worthy spots shaped by her favourites, plus experiences beyond dinner: market mornings, slice crawls, night markets.</p>
+          <h3>Places worth the trip</h3>
+          <p>Date-worthy tables shaped by her favourites, plus plans beyond dinner: market mornings, slice crawls, night markets.</p>
         </div>
         <div class="phone sm">
           <div class="screen">
@@ -585,8 +579,8 @@
 <section class="industry" id="why">
   <div class="wrap">
     <div class="section-head">
-      <h2>What dating apps<br>get wrong</h2>
-      <p class="lede">Swipe apps are built for endless browsing. People join them to go on dates. Tender swaps the swipe for a rating, gives everyone one real plan a day, and puts her in charge of whether it happens.</p>
+      <h2>Swiping<br>is stale</h2>
+      <p class="lede">Dating apps were built to keep you browsing. Tender is built to get you to the table.</p>
     </div>
 
     <div class="compare" role="table" aria-label="Today's dating apps compared with Tender">
@@ -669,7 +663,7 @@
   <div class="wrap">
     <div class="wordmark center"><img src="assets/logo.svg" alt=""><h2>Tender</h2></div>
     <p class="tagline">🔥 Let's spice things up 🔥</p>
-    <p class="lede">Tender is launching in Vancouver first. Get on the list and we'll save you a seat.</p>
+    <p class="lede">Launching in Vancouver. Save your seat at the table.</p>
     <form class="join" id="join-form">
       <input id="email" type="email" placeholder="you@email.com" required autocomplete="email" aria-label="Email">
       <select id="role" aria-label="I'm joining to">
