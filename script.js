@@ -17,6 +17,13 @@
        </div>`);
   });
 
+  // The hero phone opens on the coral splash screen, then reveals the app.
+  const splash = document.getElementById("splash");
+  if (splash) {
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setTimeout(() => splash.classList.add("gone"), still ? 0 : 1500);
+  }
+
   /* ---------------- Discovery deck ---------------- */
   const people = [
     {

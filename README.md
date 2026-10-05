@@ -2,7 +2,7 @@
 
 **Let's spice things up.** Tender is a concept for a dating app built around food. Men share videos of their best dishes, women rate the cooking and choose who they match with, and every match is pointed at a real meal: a booked table, a cooked dinner, or a food adventure.
 
-This repo is the product's landing page, with interactive iPhone screens showing what the app would look like. It's part of a series of product, design and technical portfolio prototypes.
+This repo is Tender's landing page, with interactive iPhone screens showing what the app looks like.
 
 ## How it works
 
@@ -21,10 +21,10 @@ This repo is the product's landing page, with interactive iPhone screens showing
 
 ## Brand
 
-- **Logo:** a T-bone steak cut in the shape of a heart. The bone forms the T for Tender (`assets/logo.svg`).
+- **Logo:** a black T-bone steak shaped like a heart, with a white sticker outline and a white T for Tender (`assets/logo.svg`).
 - **Tagline:** "Let's spice things up."
-- **Palette:** chili red `#C8321F` → coral `#DC6449` → peach `#EBA47F` → cream `#F7E6C8`, with black step cards and a tiled food-icon pattern.
-- **Type:** Bebas Neue for display, Bricolage Grotesque for text. Both are self-hosted under the SIL Open Font License (`assets/fonts`).
+- **Look:** a chili red to cream gradient with smoke and flame, a coral (`#DD6750`) food-pattern background, black step cards, and a classic notched iPhone that opens on the coral splash screen.
+- **Type:** Bebas Neue for the wordmark and headlines, Lora for step-card subtitles, Bricolage Grotesque for body text. All self-hosted under the SIL Open Font License (`assets/fonts`).
 
 ## Run it
 

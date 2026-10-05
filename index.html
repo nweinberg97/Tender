@@ -36,8 +36,8 @@
     <defs>
       <filter id="smoke" x="-20%" y="-20%" width="140%" height="140%">
         <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="3" seed="7"/>
-        <feDisplacementMap in="SourceGraphic" scale="120"/>
-        <feGaussianBlur stdDeviation="6"/>
+        <feDisplacementMap in="SourceGraphic" scale="70"/>
+        <feGaussianBlur stdDeviation="9"/>
       </filter>
     </defs>
     <g filter="url(#smoke)" fill="none" stroke="#fff" stroke-linecap="round">
@@ -67,25 +67,21 @@
     </g>
   </svg>
 
-  <div class="wrap">
-    <div class="hero-copy">
-      <div class="wordmark">
-        <img src="assets/logo.svg" alt="">
-        <h1>Tender</h1>
-      </div>
-      <p class="tagline">🔥 Let's spice things up 🔥</p>
-      <p class="lede">The dating app for foodies. He shares his cooking, you rate the dish, and every match ends at a table.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-ink" href="#join">Join the waitlist</a>
-        <a class="btn btn-ghost" href="#how">See how it works</a>
-      </div>
+  <div class="wrap hero-stack">
+    <div class="wordmark">
+      <img src="assets/logo.svg" alt="">
+      <h1>Tender</h1>
     </div>
+    <p class="tagline">🔥 Let's spice things up 🔥</p>
 
     <div class="hero-phone">
       <div class="phone" id="discover-phone">
         <div class="screen">
+          <div class="splash" id="splash" aria-hidden="true">
+            <div class="splash-mark"><img src="assets/logo.svg" alt=""><span>Tender</span></div>
+          </div>
           <div class="appbar">
-            <div class="logo"><img src="assets/logo.svg" alt="">Tender</div>
+            <div class="logo"><img src="assets/logo.svg" alt=""><span>Tender</span></div>
             <div class="icon" aria-hidden="true">⚙️</div>
           </div>
           <div class="deck" id="deck" aria-live="polite"></div>
@@ -115,7 +111,13 @@
           </div>
         </div>
       </div>
-      <p class="hero-hint">Try it: rate a dish, swipe, or tap ❤</p>
+      <p class="hero-hint">Try it: rate his dish, swipe, or tap ❤</p>
+    </div>
+
+    <p class="lede hero-lede">The dating app for foodies. He shares his cooking, you rate the dish, and every match ends at a table.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-ink" href="#join">Join the waitlist</a>
+      <a class="btn btn-ghost" href="#how">See how it works</a>
     </div>
   </div>
 </section>
@@ -136,7 +138,7 @@
 </section>
 
 <!-- ============ HOW IT WORKS ============ -->
-<section class="steps pattern" id="how">
+<section class="steps pattern on-coral" id="how">
   <div class="wrap">
     <div class="section-head">
       <h2>Three steps<br>to dinner</h2>
@@ -148,8 +150,8 @@
       <article class="step">
         <span class="step-label">Step 1</span>
         <div class="step-card">
-          <div><h3>Share your cooking</h3><p>He uploads videos of his best dishes.</p></div>
-          <span class="glyph" aria-hidden="true">📹</span>
+          <div><h3>Share your<br>cooking</h3><p>Upload your best dishes</p></div>
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="15" height="14" rx="2"/><circle cx="8" cy="9" r="1.6"/><path d="M3 16l4.5-4 3 2.5L14 11l4 4"/><path d="M19 15v6M16 18h6"/></svg></span>
         </div>
         <div class="phone sm">
           <div class="screen">
@@ -179,8 +181,8 @@
       <article class="step">
         <span class="step-label">Step 2</span>
         <div class="step-card">
-          <div><h3>Find your match</h3><p>She rates his cooking and swipes on the best cooks.</p></div>
-          <span class="glyph" aria-hidden="true">👆</span>
+          <div><h3>Find your<br>match</h3><p>Swipe on the best cooks</p></div>
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-1a1.5 1.5 0 0 1 3 0v1.5m0-.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a5 5 0 0 1-4-2l-3.2-4.2a1.5 1.5 0 0 1 2.3-1.9L9 15"/><path d="M14 3.5c1.6-.9 3.6-.6 4.8.8M18.8 4.3l.4-1.8M18.8 4.3l-1.8.3"/></svg></span>
         </div>
         <div class="phone sm">
           <div class="screen">
@@ -202,8 +204,8 @@
       <article class="step">
         <span class="step-label">Step 3</span>
         <div class="step-card">
-          <div><h3>Eat good food</h3><p>Book a dinner date :)</p></div>
-          <span class="glyph" aria-hidden="true">📅</span>
+          <div><h3>Eat good<br>food</h3><p>Book a dinner date :)</p></div>
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="M7 13h.01M10.3 13h.01M13.7 13h.01M17 13h.01M7 16.5h.01M10.3 16.5h.01M13.7 16.5h.01M17 16.5h.01" stroke-width="2.4"/></svg></span>
         </div>
         <div class="phone sm">
           <div class="screen">
@@ -475,15 +477,15 @@
         </ul>
       </article>
     </div>
-    <p class="fineprint">Concept pricing for a portfolio prototype. Restaurants, coaches and members shown here are fictional.</p>
+    <p class="fineprint">Concept pricing. Restaurants, coaches and members shown here are fictional.</p>
   </div>
 </section>
 
 <!-- ============ WAITLIST ============ -->
-<section class="waitlist pattern" id="join">
+<section class="waitlist pattern on-coral" id="join">
   <div class="wrap">
-    <img class="big-logo" src="assets/logo.svg" alt="">
-    <h2>Let's spice<br>things up</h2>
+    <div class="wordmark center"><img src="assets/logo.svg" alt=""><h2 class="brandtype">Tender</h2></div>
+    <p class="tagline">🔥 Let's spice things up 🔥</p>
     <p class="lede">Tender is launching in Vancouver first. Get on the list and we'll save you a seat.</p>
     <form class="join" id="join-form">
       <label class="sr" for="email" hidden>Email</label>
