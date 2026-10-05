@@ -1,31 +1,33 @@
 # Tender
 
-**Let's spice things up.** Tender is a concept for a dating app built around food. Men post videos of the dishes they cook. Women rate the cooking instead of swiping on photos, and only women can make the first move. Every match is pointed at a real meal: a booked table, a cooked dinner, or a food adventure.
+**Let's spice things up.** Tender is a concept for a dating app built around food. Men post videos of the dishes they cook and use Tender to get better at cooking. Women rate the food, not the face. Every day, Tender suggests one dinner plan, at a restaurant or a cooking class, with someone compatible, and she makes the call.
 
 This repo is Tender's landing page, with interactive iPhone screens showing what the app looks like.
 
 ## How it works
 
 1. **Share your cooking.** He posts videos of his best dishes. His cooking is his profile.
-2. **Find your match.** She rates his dishes. A great rating is how she shows interest, and she makes the move by sending her rating with a first line. He can only reply.
-3. **Eat good food.** The match opens with food openers, then a planner built from her favourite restaurants and his cooking: go out, he cooks, coffee, or a food adventure.
+2. **Rate the food.** Every woman rates every man's dishes. Every man can see who's rating him and look at her food profile.
+3. **One plan a day.** At 5pm each day, Tender pairs people on her rating of his cooking plus their shared food interests, and suggests a plan: a restaurant or a cooking class with a time and a table. He can say he's in. Only she can book it.
+4. **Eat good food.** First dates are always out, somewhere public. Cooking at someone's home only unlocks after you've met.
 
-## Two sides of the table
+## Profiles
 
-- **Her profile** is her taste: profile photo, favourite foods, favourite restaurants and go-to meals.
-- **His profile** is his cooking: profile photo, dish videos, signature dish, cooking level and what he's learning.
-- **He gets better.** Every rating comes with feedback, and coaches and classes help him level up, so men use Tender to learn to cook, not only to date.
+Everyone has a short bio and a few photos. The rest is food:
+
+- **Hers:** favourite foods, favourite restaurants, go-to meals and food she'd travel for.
+- **His:** dish videos, signature dish, cooking level, what he's learning and food he'd travel for, plus his ratings and feedback.
 
 ## What's on the page
 
-- **Hero:** "He shows off his dish. She rates it." next to two phones labelled **His side** (his menu of dishes) and **Her side** (rating a cook).
-- **Try the prototype:** a clearly labelled section with a working phone. You're Sarah: rate a cook's dish with the stars, tap **Make the move**, and pick a first line. **Skip** shows the next cook. The steps beside the phone tick off as you go.
-- **Her profile and his kitchen:** what he sees when she makes the move, and his ratings, feedback and skill path.
-- **Step screens** for posting a dish, rating and compatibility, and booking a table.
-- **After-the-match screens:** the match, the conversation, the date planner, and a cook-at-home plan with a split shopping list.
-- **Extras:** cooking coaches and classes, plus curated restaurant picks and food experiences.
-- **Why it matters for dating:** where swipe apps break down and Tender's bets, with match-to-date rate as the north-star metric.
-- **Business model:** restaurant partnerships and a Tender Premium tier (meal prep, cooking tutorials, dining discounts, coach credits).
+- **Hero:** "He shows off his dish. She rates it." next to two phones labelled **His side** and **Her side**.
+- **Try the prototype:** switch between **Try it as Sarah** and **Try it as Marcus**.
+  - *Sarah:* rate four cooks' dishes, open tonight's plan (picked from your best rating plus shared tastes), then book it or pass.
+  - *Marcus:* see who's rating you and open each woman's food profile, open tonight's plan with Sarah, and tap "I'm in". She makes the final call.
+  - The steps beside the phone tick off as you go.
+- **Two sides of the table:** her profile as he sees it, and his kitchen (ratings, feedback, skill path, lessons).
+- **One plan a day:** how plans are chosen (her rating + shared food interests) and the first-date safety rule.
+- **Step, booking and second-date screens**, cooking coaches and classes, curated restaurants and experiences, why it matters for dating, and the business model.
 
 ## Brand
 
