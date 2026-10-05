@@ -1,11 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260">
-  <g font-size="38" font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif">
-    <text x="18" y="56" transform="rotate(-12 38 44)">🍜</text>
-    <text x="140" y="44" transform="rotate(10 160 32)">🍣</text>
-    <text x="80" y="122" transform="rotate(-6 100 110)">🌮</text>
-    <text x="196" y="132" transform="rotate(14 216 120)">🍝</text>
-    <text x="16" y="196" transform="rotate(8 36 184)">🍕</text>
-    <text x="128" y="222" transform="rotate(-14 148 210)">🥩</text>
-    <text x="206" y="248" transform="rotate(6 226 236)">🥐</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <g font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif">
+    <text x="-1" y="55" font-size="50" transform="rotate(-2 24 38)">🍔</text>
+    <text x="359" y="55" font-size="50" transform="rotate(-2 384 38)">🍔</text>
+    <text x="76" y="50" font-size="50" transform="rotate(6 101 34)">🌮</text>
+    <text x="148" y="49" font-size="46" transform="rotate(-16 171 34)">🍣</text>
+    <text x="216" y="59" font-size="38" transform="rotate(4 235 46)">🍜</text>
+    <text x="287" y="53" font-size="42" transform="rotate(5 308 39)">🍕</text>
+    <text x="40" y="121" font-size="38" transform="rotate(-14 59 108)">🥩</text>
+    <text x="105" y="120" font-size="50" transform="rotate(-8 130 104)">🥐</text>
+    <text x="181" y="122" font-size="42" transform="rotate(6 202 108)">🍝</text>
+    <text x="252" y="128" font-size="50" transform="rotate(7 277 111)">🍤</text>
+    <text x="323" y="127" font-size="38" transform="rotate(9 342 114)">🥟</text>
+    <text x="-37" y="127" font-size="38" transform="rotate(9 -18 114)">🥟</text>
+    <text x="-2" y="195" font-size="46" transform="rotate(-21 21 179)">🍩</text>
+    <text x="358" y="195" font-size="46" transform="rotate(-21 381 179)">🍩</text>
+    <text x="73" y="193" font-size="38" transform="rotate(15 92 181)">🥗</text>
+    <text x="143" y="203" font-size="38" transform="rotate(-13 162 191)">🌯</text>
+    <text x="221" y="193" font-size="50" transform="rotate(21 246 176)">🍱</text>
+    <text x="287" y="193" font-size="42" transform="rotate(12 308 179)">🍢</text>
+    <text x="33" y="265" font-size="46" transform="rotate(-21 56 250)">🧁</text>
+    <text x="107" y="275" font-size="42" transform="rotate(-11 128 261)">🍙</text>
+    <text x="175" y="265" font-size="50" transform="rotate(-14 200 248)">🥞</text>
+    <text x="253" y="269" font-size="42" transform="rotate(21 274 255)">🍗</text>
+    <text x="327" y="269" font-size="50" transform="rotate(-17 352 252)">🥘</text>
+    <text x="-33" y="269" font-size="50" transform="rotate(-17 -8 252)">🥘</text>
+    <text x="-1" y="339" font-size="46" transform="rotate(16 22 323)">🍰</text>
+    <text x="359" y="339" font-size="46" transform="rotate(16 382 323)">🍰</text>
+    <text x="78" y="343" font-size="38" transform="rotate(-13 97 330)">🌭</text>
+    <text x="143" y="346" font-size="38" transform="rotate(-20 162 334)">🥨</text>
+    <text x="212" y="341" font-size="38" transform="rotate(12 231 329)">🍛</text>
+    <text x="286" y="340" font-size="38" transform="rotate(-19 305 327)">🍔</text>
   </g>
 </svg>

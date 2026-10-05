@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tender · Let's spice things up</title>
-  <meta name="description" content="Tender is the dating app for foodies. He shares his cooking, you rate the dish, and every match ends at a table.">
+  <meta name="description" content="Tender is the dating app for foodies. He cooks, she rates, and every match ends at a table.">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <meta property="og:title" content="Tender · Let's spice things up">
-  <meta property="og:description" content="The dating app where he cooks and you decide.">
+  <meta property="og:description" content="He cooks. She rates. Every match ends at a table.">
   <link rel="preload" href="assets/fonts/BebasNeue.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,10 +18,10 @@
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Tender home"><img src="assets/logo.svg" alt=""><span>Tender</span></a>
     <nav class="nav-links" aria-label="Sections">
+      <a href="#sides">For her &amp; him</a>
       <a href="#how">How it works</a>
       <a href="#date">The date</a>
       <a href="#why">Why Tender</a>
-      <a href="#business">Business</a>
       <a class="btn btn-ink" href="#join">Join the waitlist</a>
     </nav>
   </div>
@@ -31,41 +31,8 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
-  <!-- smoke, top left -->
-  <svg class="hero-smoke" viewBox="0 0 600 600" aria-hidden="true">
-    <defs>
-      <filter id="smoke" x="-20%" y="-20%" width="140%" height="140%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="3" seed="7"/>
-        <feDisplacementMap in="SourceGraphic" scale="70"/>
-        <feGaussianBlur stdDeviation="9"/>
-      </filter>
-    </defs>
-    <g filter="url(#smoke)" fill="none" stroke="#fff" stroke-linecap="round">
-      <path d="M120 560 C 60 420, 260 380, 180 260 S 300 80, 420 60" stroke-width="26" opacity=".55"/>
-      <path d="M200 580 C 160 470, 320 430, 260 300 S 360 160, 520 120" stroke-width="14" opacity=".45"/>
-      <path d="M60 480 C 40 360, 160 300, 100 180 S 160 40, 280 20" stroke-width="18" opacity=".35"/>
-    </g>
-  </svg>
-  <!-- flame, bottom right -->
-  <svg class="hero-flame" viewBox="0 0 560 520" aria-hidden="true">
-    <defs>
-      <filter id="fire" x="-30%" y="-30%" width="160%" height="160%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.018 0.035" numOctaves="4" seed="3"/>
-        <feDisplacementMap in="SourceGraphic" scale="90"/>
-        <feGaussianBlur stdDeviation="3"/>
-      </filter>
-      <radialGradient id="fg1" cx="70%" cy="90%" r="70%">
-        <stop offset="0" stop-color="#ffe27a"/>
-        <stop offset=".35" stop-color="#ffab2e"/>
-        <stop offset=".7" stop-color="#f05a1e" stop-opacity=".7"/>
-        <stop offset="1" stop-color="#f05a1e" stop-opacity="0"/>
-      </radialGradient>
-    </defs>
-    <g filter="url(#fire)">
-      <path d="M560 520 L180 520 C 230 430, 300 470, 320 380 C 340 290, 420 330, 430 220 C 440 140, 520 160, 540 60 L560 60 Z" fill="url(#fg1)"/>
-      <path d="M560 520 L320 520 C 360 450, 420 470, 430 400 C 445 320, 520 330, 540 250 L560 250 Z" fill="#ffd36b" opacity=".75"/>
-    </g>
-  </svg>
+  <img class="hero-smoke" src="assets/smoke.png" alt="">
+  <img class="hero-flame" src="assets/flame.png" alt="">
 
   <div class="wrap hero-stack">
     <div class="wordmark">
@@ -74,7 +41,19 @@
     </div>
     <p class="tagline">🔥 Let's spice things up 🔥</p>
 
-    <div class="hero-phone">
+    <div class="hero-demo">
+      <aside class="try" aria-label="How to try the demo">
+        <p class="try-title">Try it yourself</p>
+        <p class="try-sub">This is a working demo of the app. Tap right on the phone.</p>
+        <ol class="try-steps" id="try-steps">
+          <li data-step="1"><b>Watch his dish</b><span>Each card leads with a cook's video and his profile photo.</span></li>
+          <li data-step="2"><b>Tap the stars to rate it</b><span>Your rating replaces the swipe.</span></li>
+          <li data-step="3"><b>Tap "Make the move"</b><span>Pick a first line. It's sent with your rating.</span></li>
+        </ol>
+        <p class="try-tip">Not feeling it? Tap <b>Skip</b> to see the next cook.</p>
+      </aside>
+
+      <div class="hero-phone">
       <div class="phone" id="discover-phone">
         <div class="screen">
           <div class="splash" id="splash" aria-hidden="true">
@@ -82,57 +61,149 @@
           </div>
           <div class="appbar">
             <div class="logo"><img src="assets/logo.svg" alt=""><span>Tender</span></div>
-            <div class="icon" aria-hidden="true">⚙️</div>
+            <span class="appbar-note">Rate the cooks</span>
           </div>
           <div class="deck" id="deck" aria-live="polite"></div>
           <div class="deck-actions">
-            <button class="pass" id="btn-pass" aria-label="Pass">✕</button>
-            <button class="like" id="btn-like" aria-label="Like">❤</button>
-            <button id="btn-super" aria-label="Save him a seat (super like)">🍽️</button>
+            <button class="pass" id="btn-skip" type="button">Skip</button>
+            <button class="move" id="btn-move" type="button">Make the move 💌</button>
           </div>
           <div class="tabbar" aria-hidden="true">
-            <span class="on"><b>🔥</b>Discover</span><span><b>💬</b>Matches</span><span><b>📅</b>Dates</span><span><b>👩‍🍳</b>Learn</span>
+            <span class="on"><b>⭐</b>Rate</span><span><b>💬</b>Moves</span><span><b>📅</b>Dates</span><span><b>🍽️</b>My taste</span>
           </div>
 
           <div class="match-overlay" id="match" role="dialog" aria-modal="false" aria-labelledby="match-title">
-            <h4 id="match-title">It's a match 🍝</h4>
+            <h4 id="match-title">You made<br>the move 💌</h4>
             <div class="pair">
               <div class="ph"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=70&auto=format&fit=crop" alt="Sarah"></div>
               <img src="assets/logo.svg" alt="">
               <div class="ph"><img id="match-face" src="" alt=""></div>
             </div>
-            <p id="match-copy">You gave his brisket 5 stars. He wants to cook it for you.</p>
+            <p id="match-copy">Marcus gets your 5★ rating. Add a first line to go with it:</p>
             <div class="starters">
-              <button>Best meal you've had recently?</button>
-              <button>Where should we eat first?</button>
-              <button>Cook for me or go out?</button>
+              <button type="button">Where did you learn to cook like that?</button>
+              <button type="button">Cook it for me, or take me out?</button>
+              <button type="button">What's the best meal you've ever had?</button>
             </div>
-            <button class="close" id="match-close">Keep swiping</button>
+            <button class="close" id="match-close" type="button">Back to rating</button>
           </div>
         </div>
       </div>
-      <p class="hero-hint">Try it: rate his dish, swipe, or tap ❤</p>
+      </div>
+
+      <aside class="try try-who" aria-label="Whose view this is">
+        <p class="try-title">You're Sarah</p>
+        <p class="try-sub">You're seeing the app as a woman in Vancouver. Four cooks nearby have posted dishes for you to rate.</p>
+        <div class="who-faces" aria-hidden="true">
+          <div class="ph"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=70&auto=format&fit=crop" alt=""></div>
+          <div class="ph"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=70&auto=format&fit=crop" alt=""></div>
+          <div class="ph"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&q=70&auto=format&fit=crop" alt=""></div>
+          <div class="ph"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=70&auto=format&fit=crop" alt=""></div>
+        </div>
+        <p class="try-tip">Only you can start the conversation. He replies once you make the move.</p>
+      </aside>
     </div>
 
-    <p class="lede hero-lede">The dating app for foodies. He shares his cooking, you rate the dish, and every match ends at a table.</p>
+    <p class="lede hero-lede">The dating app for foodies. He cooks. She rates. She makes the first move, and every match ends at a table.</p>
     <div class="hero-ctas">
       <a class="btn btn-ink" href="#join">Join the waitlist</a>
-      <a class="btn btn-ghost" href="#how">See how it works</a>
+      <a class="btn btn-ghost" href="#sides">See how it works</a>
     </div>
   </div>
 </section>
 
 <!-- ============ FLIP ============ -->
-<section class="flip">
+<section class="flip pattern on-cream">
   <div class="wrap">
     <div>
-      <h2>Swipe on what he can make, not just how he looks.</h2>
-      <p class="lede">You can learn a surprising amount about someone from what they cook. Tender puts the dish first: a short cooking video, a signature plate, the restaurant he'd take you to. Attraction still matters. Food just gives you a reason to start talking.</p>
+      <h2>No swiping. She rates the cooking.</h2>
+      <p class="lede">Most dating apps are a swipe on a selfie. On Tender, men post the dishes they cook and women rate them. A great rating is how she shows interest, and only she can start the conversation. It's attraction with a reason to talk built in.</p>
     </div>
     <div class="bubbles" aria-label="Example openers">
       <p class="bubble old">Hey, what do you do?</p>
-      <p class="bubble new">Wait, you make your own pasta?</p>
-      <p class="bubble new">Five stars for that brisket. When am I trying it?</p>
+      <p class="bubble new">Five stars for that brisket. Where'd you learn that?</p>
+      <p class="bubble new">You make your own pasta? Prove it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TWO SIDES ============ -->
+<section class="sides" id="sides">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Two sides<br>of the table</h2>
+      <p class="lede">Everyone has a profile photo. What comes next is different: his profile is about what he cooks, hers is about what she loves to eat.</p>
+    </div>
+
+    <div class="sides-grid">
+      <!-- HER -->
+      <article class="side her pattern on-coral">
+        <div class="txt">
+          <p class="side-label">For her</p>
+          <h3>She rates. She makes the move.</h3>
+          <ul class="side-list">
+            <li><b>⭐</b><span>Rate his dishes instead of swiping on photos.</span></li>
+            <li><b>💌</b><span>Only she can send the first message, and it comes with her rating.</span></li>
+            <li><b>🍜</b><span>Her profile is her taste: favourite foods, favourite restaurants and go-to meals.</span></li>
+          </ul>
+        </div>
+        <div class="phone sm">
+          <div class="screen">
+            <div class="appbar"><span class="icon">‹</span><span class="title">Sarah made the move</span><span class="icon">⋯</span></div>
+            <div class="scr-body">
+              <div class="her-hero ph">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=70&auto=format&fit=crop" alt="">
+                <div class="her-name"><b>Sarah, 27</b><span>Product designer · Mount Pleasant</span></div>
+              </div>
+              <div class="her-rating"><span class="s">★★★★★</span><b>for your T-bone</b><em>"Okay, that crust. Teach me?"</em></div>
+              <h5 class="mini-h">Favourite foods</h5>
+              <div class="chips-row"><span class="chip soft">🍜 Ramen</span><span class="chip soft">🧀 Burrata</span><span class="chip soft">🌶️ Spicy anything</span><span class="chip soft">🥐 Croissants</span></div>
+              <h5 class="mini-h">Go-to meal</h5>
+              <p class="goto">Sunday: farmers market, flat white, eggs any way you make them.</p>
+              <h5 class="mini-h">Favourite restaurants</h5>
+              <div class="fav"><div class="ph"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=120&q=70&auto=format&fit=crop" alt=""></div><div><b>Midnight Noodle Co.</b><span>Always orders the spicy miso</span></div></div>
+              <div class="fav"><div class="ph"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=120&q=70&auto=format&fit=crop" alt=""></div><div><b>Nonna's Back Room</b><span>Burrata first, every time</span></div></div>
+            </div>
+            <div class="cta-bar dock">Reply with a dinner plan</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- HIM -->
+      <article class="side him">
+        <div class="txt">
+          <p class="side-label">For him</p>
+          <h3>He cooks. He gets better.</h3>
+          <ul class="side-list">
+            <li><b>📹</b><span>Post your best dishes. Your cooking is your profile.</span></li>
+            <li><b>📈</b><span>Every rating comes with feedback, so you know what to fix.</span></li>
+            <li><b>👨‍🍳</b><span>Lessons, coaches and classes to level up, date or no date.</span></li>
+          </ul>
+        </div>
+        <div class="phone sm">
+          <div class="screen">
+            <div class="appbar"><div class="logo"><img src="assets/logo.svg" alt=""><span>Tender</span></div><span class="appbar-note">My kitchen</span></div>
+            <div class="scr-body">
+              <div class="score">
+                <div><b>4.6</b><span class="s">★★★★★</span></div>
+                <p>Your average from <b>38 ratings</b><br><span class="up">▲ 0.3 this month</span></p>
+              </div>
+              <div class="fav top-dish"><div class="ph"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=120&q=70&auto=format&fit=crop" alt=""></div><div><b>Reverse-seared T-bone</b><span>Top dish · 4.9★ · 3 moves this week</span></div></div>
+              <h5 class="mini-h">What raters said</h5>
+              <div class="chips-row"><span class="chip soft">Perfect crust ×12</span><span class="chip soft">Needs salt ×4</span><span class="chip soft">Plating 👀 ×3</span></div>
+              <h5 class="mini-h">Your skill path</h5>
+              <ul class="skills">
+                <li class="done"><i>✓</i>Knife skills</li>
+                <li class="done"><i>✓</i>Searing</li>
+                <li class="now"><i>●</i>Pan sauces<span class="bar"><span></span></span></li>
+                <li><i>○</i>Fresh pasta</li>
+              </ul>
+              <div class="lesson"><div class="ph"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=70&auto=format&fit=crop" alt=""></div><div><b>Pan sauces with Maya</b><span>30 min · Thu 7pm · $35</span></div><span class="go">Book</span></div>
+            </div>
+            <div class="tabbar"><span class="on"><b>🔪</b>Kitchen</span><span><b>⭐</b>Ratings</span><span><b>📅</b>Dates</span><span><b>👨‍🍳</b>Learn</span></div>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -142,11 +213,10 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Three steps<br>to dinner</h2>
-      <p class="lede">Men show what they can cook. Women rate the dishes and choose who gets a date. Every match is pointed at a real meal.</p>
+      <p class="lede">He shows what he can cook. She rates it and decides who gets a message. Every match points at a real meal.</p>
     </div>
 
     <div class="step-grid">
-      <!-- Step 1 -->
       <article class="step">
         <span class="step-label">Step 1</span>
         <div class="step-card">
@@ -169,7 +239,7 @@
                 </div>
               </div>
               <div class="field"><label>Tags</label>
-                <div style="display:flex;gap:4px;flex-wrap:wrap"><span class="chip soft">Italian</span><span class="chip soft">Handmade</span><span class="chip soft">Date night</span></div>
+                <div class="chips-row"><span class="chip soft">Italian</span><span class="chip soft">Handmade</span><span class="chip soft">Date night</span></div>
               </div>
               <div class="cta-bar">Post to my menu</div>
             </div>
@@ -177,11 +247,10 @@
         </div>
       </article>
 
-      <!-- Step 2 -->
       <article class="step">
         <span class="step-label">Step 2</span>
         <div class="step-card">
-          <div><h3>Find your<br>match</h3><p>Swipe on the best cooks</p></div>
+          <div><h3>Find your<br>match</h3><p>Rate the best cooks</p></div>
           <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-1a1.5 1.5 0 0 1 3 0v1.5m0-.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a5 5 0 0 1-4-2l-3.2-4.2a1.5 1.5 0 0 1 2.3-1.9L9 15"/><path d="M14 3.5c1.6-.9 3.6-.6 4.8.8M18.8 4.3l.4-1.8M18.8 4.3l-1.8.3"/></svg></span>
         </div>
         <div class="phone sm">
@@ -195,12 +264,12 @@
               </div>
               <div class="list-card"><h5>You disagree on</h5><ul><li>🍍 Pineapple on pizza</li></ul></div>
               <div class="my-rating"><b>Your rating of his cacio e pepe</b><span class="s">★★★★★</span></div>
+              <div class="cta-bar">Make the move 💌</div>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- Step 3 -->
       <article class="step">
         <span class="step-label">Step 3</span>
         <div class="step-card">
@@ -212,15 +281,16 @@
             <div class="appbar"><span class="icon">‹</span><span class="title">Book a table</span><span class="icon">⌕</span></div>
             <div class="scr-body">
               <div class="seg"><span class="on">First date</span><span>Late night</span><span>Romantic</span></div>
+              <p class="why-line">Picked from Sarah's favourites and Marcus's cooking</p>
               <div class="rest picked">
                 <div class="ph"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&q=70&auto=format&fit=crop" alt=""></div>
                 <div><h5>Nonna's Back Room</h5><p>Italian · $$ · 1.1 km between you</p>
-                  <div class="chips"><span class="chip soft">Cozy + casual</span><span class="chip soft">Shared plates</span></div></div>
+                  <div class="chips"><span class="chip soft">On her list</span><span class="chip soft">Cozy + casual</span></div></div>
               </div>
               <div class="rest">
                 <div class="ph"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&q=70&auto=format&fit=crop" alt=""></div>
                 <div><h5>Midnight Noodle Co.</h5><p>Ramen · $ · open till 2am</p>
-                  <div class="chips"><span class="chip soft">Late night</span></div></div>
+                  <div class="chips"><span class="chip soft">On her list</span><span class="chip soft">Late night</span></div></div>
               </div>
               <div class="rest">
                 <div class="ph"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=200&q=70&auto=format&fit=crop" alt=""></div>
@@ -242,11 +312,10 @@
   <div class="wrap">
     <div class="section-head">
       <h2>A match is just<br>the appetizer</h2>
-      <p class="lede">Most dating apps stop at "send a message." Tender keeps going until there's a plate in front of you: food openers, a planner that picks the kind of date, and a shopping list if he's cooking.</p>
+      <p class="lede">She makes the move, he replies, and Tender keeps going until there's a plate in front of them: food openers, a planner that picks the kind of date, and a shopping list if he's cooking.</p>
     </div>
 
     <div class="rail" tabindex="0" aria-label="App screens after a match">
-      <!-- Match -->
       <figure>
         <div class="phone sm">
           <div class="screen scr-match on-red">
@@ -257,7 +326,7 @@
                 <img class="lg" src="assets/logo.svg" alt="">
                 <div class="ph"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=70&auto=format&fit=crop" alt=""></div>
               </div>
-              <p class="rated">You rated his T-bone ★★★★★<br>He's been waiting to cook for someone who gets it.</p>
+              <p class="rated">You rated his T-bone ★★★★★<br>Marcus replied to your move in 4 minutes.</p>
               <div class="starters">
                 <button>What's the best meal you've had recently?</button>
                 <button>What's your signature dish?</button>
@@ -267,79 +336,77 @@
             </div>
           </div>
         </div>
-        <figcaption><b>The match</b><span>No blank text box. Four food openers, one tap each.</span></figcaption>
+        <figcaption><b>The match</b><span>He replies to her move. No blank text box, just food openers.</span></figcaption>
       </figure>
 
-      <!-- Chat -->
       <figure>
         <div class="phone sm">
           <div class="screen">
             <div class="chat-head">
               <span class="icon" style="font-size:16px">‹</span>
               <div class="ph"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=70&auto=format&fit=crop" alt=""></div>
-              <div><b>Marcus</b><span>Smokes brisket · Commercial Dr</span></div>
+              <div><b>Marcus</b><span>Your rating: ★★★★★ T-bone</span></div>
             </div>
             <div class="scr-body chat">
-              <p class="msg me">Cook for me or go out?</p>
-              <p class="msg them">Honestly? Both. Dinner out first so you can vet me. Then I make you the T-bone.</p>
-              <p class="msg me">Fair. I'll travel across the city for good ramen fyi</p>
-              <p class="msg them">Then I know exactly where we're going 👇</p>
+              <p class="sys">You made the move · Tue 8:14pm</p>
+              <p class="msg me">Okay, that crust. Where'd you learn that?</p>
+              <p class="msg them">Two years of ruining steaks. Then a lesson with a coach on here, honestly.</p>
+              <p class="msg me">Cook it for me or take me out?</p>
+              <p class="msg them">Out first. I saw this is on your list 👇</p>
               <div class="share-card" style="align-self:flex-start">
                 <div class="ph"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=300&q=70&auto=format&fit=crop" alt=""></div>
-                <div class="t"><b>Midnight Noodle Co.</b><span>You both saved this spot</span></div>
+                <div class="t"><b>Midnight Noodle Co.</b><span>One of Sarah's favourites</span></div>
               </div>
             </div>
             <div class="quick"><span class="chip">🍜 Pick a restaurant</span><span class="chip">🍳 Cook together</span><span class="chip">☕ Coffee</span></div>
             <div class="composer"><span>Message Marcus</span><span>📷</span></div>
           </div>
         </div>
-        <figcaption><b>The conversation</b><span>Share spots and dishes in the thread. Quick actions turn talk into a plan.</span></figcaption>
+        <figcaption><b>The conversation</b><span>It starts from her rating. Her favourite spots and his dishes are one tap away.</span></figcaption>
       </figure>
 
-      <!-- Planner -->
       <figure>
         <div class="phone sm">
           <div class="screen">
             <div class="appbar"><span class="icon">‹</span><span class="title">Plan with Marcus</span><span class="icon">✕</span></div>
             <div class="scr-body">
               <p class="plan-q">What should you two do?</p>
-              <div class="plan-opt on"><span class="em">🍽️</span><div><b>Go out</b><span>Restaurants you'd both like</span></div><i>›</i></div>
-              <div class="plan-opt"><span class="em">🍳</span><div><b>Cook together</b><span>Pick a recipe, split the list</span></div><i>›</i></div>
+              <div class="plan-opt on"><span class="em">🍽️</span><div><b>Go out</b><span>Starting with her favourites</span></div><i>›</i></div>
+              <div class="plan-opt"><span class="em">🍳</span><div><b>He cooks</b><span>His top-rated dish, at home</span></div><i>›</i></div>
               <div class="plan-opt"><span class="em">☕</span><div><b>Coffee</b><span>Low-key, 45 minutes</span></div><i>›</i></div>
               <div class="plan-opt"><span class="em">🥐</span><div><b>Food adventure</b><span>A cuisine neither of you has tried</span></div><i>›</i></div>
-              <div class="list-card" style="margin-top:10px"><h5>Why these picks</h5><ul><li>You both love Japanese + Italian</li><li>Under 3 km for both of you</li></ul></div>
+              <div class="list-card" style="margin-top:10px"><h5>Why these picks</h5><ul><li>Japanese + Italian on her list</li><li>Under 3 km for both of you</li></ul></div>
             </div>
           </div>
         </div>
-        <figcaption><b>The plan</b><span>Pick the kind of date. Tender narrows it by cuisine, distance, price and vibe.</span></figcaption>
+        <figcaption><b>The plan</b><span>Pick the kind of date. Her favourite spots come first, then cuisine, distance and price.</span></figcaption>
       </figure>
 
-      <!-- Cook together -->
       <figure>
         <div class="phone sm">
           <div class="screen">
-            <div class="appbar"><span class="icon">‹</span><span class="title">Cook together</span><span class="icon">♡</span></div>
+            <div class="appbar"><span class="icon">‹</span><span class="title">He's cooking</span><span class="icon">♡</span></div>
             <div class="scr-body">
               <div class="recipe-hero ph">
                 <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=500&q=70&auto=format&fit=crop" alt="">
                 <span class="lbl">Reverse-seared T-bone for two</span>
               </div>
-              <div class="meta3"><div><b>Medium</b><span>LEVEL</span></div><div><b>75 min</b><span>TIME</span></div><div><b>Steakhouse</b><span>CUISINE</span></div></div>
+              <div class="meta3"><div><b>Medium</b><span>LEVEL</span></div><div><b>75 min</b><span>TIME</span></div><div><b>4.9★</b><span>HER RATING</span></div></div>
               <div class="shop"><h5>Shopping list <span>split 3 / 3</span></h5>
                 <ul>
                   <li class="done"><i></i>T-bone, 2 in thick<em>Marcus</em></li>
                   <li class="done"><i></i>Butter, garlic, thyme<em>Marcus</em></li>
                   <li class="done"><i></i>Baby potatoes<em>Marcus</em></li>
-                  <li><i></i>Arugula + lemon<em>You</em></li>
-                  <li><i></i>Bottle of something red<em>You</em></li>
-                  <li><i></i>Dessert, your call<em>You</em></li>
+                  <li><i></i>Burrata, obviously<em>Sarah</em></li>
+                  <li><i></i>Bottle of something red<em>Sarah</em></li>
+                  <li><i></i>Croissants for the morning<em>Sarah</em></li>
                 </ul>
               </div>
               <div class="cta-bar">Start recipe · Sat 6:30pm</div>
             </div>
           </div>
         </div>
-        <figcaption><b>The kitchen</b><span>Recipe, difficulty, time and a shared shopping list split between you.</span></figcaption>
+        <figcaption><b>The kitchen</b><span>He cooks the dish she rated. Recipe, timing and a shared shopping list.</span></figcaption>
       </figure>
     </div>
     <p class="rail-hint">Scroll sideways for more screens</p>
@@ -351,20 +418,20 @@
   <div class="wrap">
     <div class="section-head">
       <h2>More than<br>a dating app</h2>
-      <p class="lede">Tender helps people get better at cooking and find better places to eat, with or without a date on the calendar.</p>
+      <p class="lede">Men come to Tender to get better at cooking, not only to date. Women find new places and experiences worth going to.</p>
     </div>
     <div class="extras-grid">
-      <article class="extra red">
+      <article class="extra red pattern">
         <div class="txt">
-          <h3>Cooking classes &amp; coaches</h3>
-          <p>Sign up for a class solo or with a match. Nervous about the dish you promised? Book a 30-minute lesson with a coach first.</p>
+          <h3>Learn to cook better</h3>
+          <p>Ratings show him what to work on. Coaches and classes help him get there. Classes can be solo or with a match.</p>
         </div>
         <div class="phone sm">
           <div class="screen">
             <div class="appbar"><span class="icon">‹</span><span class="title">Learn</span><span class="icon">⌕</span></div>
             <div class="scr-body">
-              <div class="nervous"><b>Promised a soufflé? 😅</b><span>Get a 30-minute lesson before Saturday.</span></div>
-              <div class="coach"><div class="ph"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=70&auto=format&fit=crop" alt=""></div><div><b>Maya R.</b><span>Italian · fresh pasta</span><span>★ 4.9 · 212 lessons</span></div><div class="pr">$35<small>30 min</small></div></div>
+              <div class="nervous"><b>Raters say: needs salt 🧂</b><span>A 30-minute lesson fixes that before Saturday.</span></div>
+              <div class="coach"><div class="ph"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=70&auto=format&fit=crop" alt=""></div><div><b>Maya R.</b><span>Italian · sauces &amp; pasta</span><span>★ 4.9 · 212 lessons</span></div><div class="pr">$35<small>30 min</small></div></div>
               <div class="coach"><div class="ph"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=120&q=70&auto=format&fit=crop" alt=""></div><div><b>Daniel K.</b><span>Japanese home cooking</span><span>★ 4.8 · 167 lessons</span></div><div class="pr">$40<small>30 min</small></div></div>
               <div class="coach"><div class="ph"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=120&q=70&auto=format&fit=crop" alt=""></div><div><b>Adaeze O.</b><span>Baking · soufflés</span><span>★ 5.0 · 98 lessons</span></div><div class="pr">$30<small>30 min</small></div></div>
               <div class="class-card">
@@ -372,7 +439,7 @@
                 <div class="t"><div><b>Sourdough for two</b><span>Sat 11am · Mount Pleasant</span></div><span class="go">Book 2 seats</span></div>
               </div>
             </div>
-            <div class="tabbar"><span><b>🔥</b>Discover</span><span><b>💬</b>Matches</span><span><b>📅</b>Dates</span><span class="on"><b>👩‍🍳</b>Learn</span></div>
+            <div class="tabbar"><span><b>🔪</b>Kitchen</span><span><b>⭐</b>Ratings</span><span><b>📅</b>Dates</span><span class="on"><b>👨‍🍳</b>Learn</span></div>
           </div>
         </div>
       </article>
@@ -380,11 +447,11 @@
       <article class="extra cream">
         <div class="txt">
           <h3>Restaurant picks &amp; food adventures</h3>
-          <p>A curated list of date-worthy spots, plus experiences that aren't dinner at all: market mornings, bakery crawls, night markets.</p>
+          <p>A curated list of date-worthy spots shaped by her favourites, plus experiences beyond dinner: market mornings, slice crawls, night markets.</p>
         </div>
         <div class="phone sm">
           <div class="screen">
-            <div class="appbar"><div class="logo"><img src="assets/logo.svg" alt="">Tender</div><span class="icon">📍</span></div>
+            <div class="appbar"><div class="logo"><img src="assets/logo.svg" alt=""><span>Tender</span></div><span class="icon">📍</span></div>
             <div class="scr-body">
               <div class="toggle-row"><span class="chip hot">This weekend</span><span class="chip">Under $40</span><span class="chip">Walkable</span></div>
               <div class="class-card">
@@ -400,7 +467,7 @@
                 <div class="t"><div><b>Night market skewers</b><span>Sun 7pm · 2 hrs · $</span></div><span class="go">Invite</span></div>
               </div>
             </div>
-            <div class="tabbar"><span><b>🔥</b>Discover</span><span><b>💬</b>Matches</span><span class="on"><b>📅</b>Dates</span><span><b>👩‍🍳</b>Learn</span></div>
+            <div class="tabbar"><span><b>⭐</b>Rate</span><span><b>💬</b>Moves</span><span class="on"><b>📅</b>Dates</span><span><b>🍽️</b>My taste</span></div>
           </div>
         </div>
       </article>
@@ -413,36 +480,41 @@
   <div class="wrap">
     <div class="section-head">
       <h2>What dating apps<br>get wrong</h2>
-      <p class="lede">Swipe apps are tuned for matches and messages. People join them to go on dates. Tender is built around the part in between.</p>
+      <p class="lede">Swipe apps are built for endless browsing. People join them to go on dates. Tender changes who makes the first move and gives everyone a reason to show up.</p>
     </div>
 
     <div class="compare" role="table" aria-label="Today's dating apps compared with Tender">
       <div class="compare-row head" role="row"><span role="columnheader">The problem</span><span role="columnheader">Dating apps today</span><span role="columnheader">Tender's bet</span></div>
       <div class="compare-row" role="row">
-        <h4 role="cell">Every profile looks the same</h4>
-        <p class="old" role="cell">Selfies, a job title and a two-line bio. Choices come down to one photo.</p>
-        <p class="new" role="cell">A cooking video shows effort, taste and personality at once. <strong>You see how he'd treat you at dinner.</strong></p>
+        <h4 role="cell">Swiping is shallow</h4>
+        <p class="old" role="cell">A split-second decision on one photo.</p>
+        <p class="new" role="cell">She rates a dish he made. Effort, taste and personality in one video. <strong>She sees how he'd treat her at dinner.</strong></p>
+      </div>
+      <div class="compare-row" role="row">
+        <h4 role="cell">Women get flooded</h4>
+        <p class="old" role="cell">Anyone can message anyone, so inboxes fill with low-effort openers.</p>
+        <p class="new" role="cell">Only women start conversations, and only after rating his cooking. <strong>She decides who hears from her.</strong></p>
       </div>
       <div class="compare-row" role="row">
         <h4 role="cell">Conversations die at "hey"</h4>
         <p class="old" role="cell">Matches sit unanswered because nobody knows how to start.</p>
-        <p class="new" role="cell">Every match opens with a dish she already rated. <strong>The first message writes itself.</strong></p>
+        <p class="new" role="cell">Every conversation opens with a dish she already rated. <strong>The first message writes itself.</strong></p>
       </div>
       <div class="compare-row" role="row">
-        <h4 role="cell">Matches never turn into dates</h4>
+        <h4 role="cell">Matches never become dates</h4>
         <p class="old" role="cell">Planning is left to the users, so the chat drifts and fades.</p>
-        <p class="new" role="cell">A built-in planner, restaurant picks and booking. <strong>The next step is always one tap away.</strong></p>
+        <p class="new" role="cell">A planner built from her favourite spots and his cooking. <strong>The next step is always one tap away.</strong></p>
       </div>
       <div class="compare-row" role="row">
-        <h4 role="cell">Low effort is rewarded</h4>
-        <p class="old" role="cell">Mass swiping costs nothing, so women get flooded and men get ignored.</p>
-        <p class="new" role="cell">Posting a dish takes real effort. <strong>Ratings surface the men who actually show up.</strong></p>
+        <h4 role="cell">No reason to stay</h4>
+        <p class="old" role="cell">The app is only useful while you're swiping.</p>
+        <p class="new" role="cell">Ratings, feedback and lessons make him a better cook either way. <strong>Men come back to get better.</strong></p>
       </div>
     </div>
 
     <div class="north-star">
       <span class="big">Dinners,<br>not matches</span>
-      <p>Tender measures success by <b>match-to-date rate</b>: how many matches end with a booked table or a cooked meal. It's the number that matters to people, and the one most dating apps aren't designed around.</p>
+      <p>Tender measures success by <b>match-to-date rate</b>: how many moves end with a booked table or a cooked meal. It's the number that matters to people, and the one most dating apps aren't designed around.</p>
     </div>
   </div>
 </section>
@@ -452,7 +524,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>How Tender<br>makes money</h2>
-      <p class="lede">Revenue comes from the meals the app creates, not from charging people to be seen.</p>
+      <p class="lede">Revenue comes from the meals and the skills the app creates, not from charging people to be seen.</p>
     </div>
     <div class="money-grid">
       <article class="money-card">
@@ -473,7 +545,7 @@
           <li><span>🥡</span><div><b>Meal prep services</b><span>Date-night kits with everything pre-measured.</span></div></li>
           <li><span>🎥</span><div><b>Cooking tutorials</b><span>Step-by-step videos for every recipe in the app.</span></div></li>
           <li><span>💸</span><div><b>Dining discounts</b><span>Exclusive deals at partner restaurants.</span></div></li>
-          <li><span>👩‍🍳</span><div><b>Coach credits</b><span>One 30-minute coaching lesson each month.</span></div></li>
+          <li><span>👨‍🍳</span><div><b>Coach credits</b><span>One 30-minute coaching lesson each month.</span></div></li>
         </ul>
       </article>
     </div>
@@ -484,19 +556,18 @@
 <!-- ============ WAITLIST ============ -->
 <section class="waitlist pattern on-coral" id="join">
   <div class="wrap">
-    <div class="wordmark center"><img src="assets/logo.svg" alt=""><h2 class="brandtype">Tender</h2></div>
+    <div class="wordmark center"><img src="assets/logo.svg" alt=""><h2>Tender</h2></div>
     <p class="tagline">🔥 Let's spice things up 🔥</p>
     <p class="lede">Tender is launching in Vancouver first. Get on the list and we'll save you a seat.</p>
     <form class="join" id="join-form">
-      <label class="sr" for="email" hidden>Email</label>
-      <input id="email" type="email" placeholder="you@email.com" required autocomplete="email">
+      <input id="email" type="email" placeholder="you@email.com" required autocomplete="email" aria-label="Email">
       <select id="role" aria-label="I'm joining to">
         <option>I'm here to rate</option>
         <option>I'm here to cook</option>
       </select>
       <button class="btn btn-ink" type="submit">Save my seat</button>
     </form>
-    <p class="join-done" id="join-done" role="status">You're on the list. Start practising your signature dish. 🔥</p>
+    <p class="join-done" id="join-done" role="status"></p>
   </div>
 </section>
 
