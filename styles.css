@@ -763,12 +763,12 @@ footer .brand img { width: 30px; }
 }
 
 /* the one-liner under the step phones */
-.steps-line {
+.steps .steps-line {
   margin: 96px auto 0; text-align: center; color: #fff;
   font-family: var(--display); font-size: clamp(40px, 5.6vw, 84px); line-height: .98;
   letter-spacing: .04em; -webkit-text-stroke: .025em #fff; paint-order: stroke fill;
   text-shadow: 0 3px 16px rgba(90,15,0,.3);
 }
-.steps-line span { display: block; }
-.steps-line span + span { margin-top: .06em; }
-@media (max-width: 760px) { .steps-line { margin-top: 64px; font-size: clamp(30px, 9.4vw, 44px); } }
+.steps .steps-line span { display: block; }
+.steps .steps-line span + span { margin-top: .06em; }
+@media (max-width: 760px) { .steps .steps-line { margin-top: 64px; font-size: clamp(30px, 9.4vw, 44px); } }
