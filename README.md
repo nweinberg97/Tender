@@ -1,5 +1,7 @@
 # Tender
 
+> 🚧 **Status: concept stage.** This repo is a landing page only — the app itself has not been built yet.
+
 **Date someone with taste.** Tender is a concept for a dating app built around food. Men post videos of the dishes they cook and use Tender to get better at cooking. Women rate the food, not the face. Every day, Tender suggests one dinner plan, at a restaurant or a cooking class, with someone compatible, and she makes the call.
 
 This repo is Tender's landing page, with interactive iPhone screens showing what the app looks like.
